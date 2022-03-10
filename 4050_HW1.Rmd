@@ -1,5 +1,5 @@
 ---
-title: "Stanford PhD EDS Supplement"
+title: "4050 HW1: Data Wrangling"
 author: "Cameron Diwa"
 date: "11/9/2021"
 output: html_document
