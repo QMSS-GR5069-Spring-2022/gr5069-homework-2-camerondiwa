@@ -13,7 +13,7 @@ library(tidyverse)
 scorecard.dictionary <- read_csv("CollegeScorecardDataDictionary-09-12-2015.csv")
 glimpse(scorecard.dictionary)
 scorecard <- read_csv("CollegeScorecard.csv")
-
+glimpse(scorecard)
 crimes <- read_csv("Crime_2015.csv")
 ```
 
