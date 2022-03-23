@@ -1,0 +1,1 @@
+4050 HW1 is basically a small project in data wrangling. the project attempts to help a student narrow down their list of colleges to apply to, based on their criteria
