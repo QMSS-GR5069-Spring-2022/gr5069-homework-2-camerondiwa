@@ -20,12 +20,14 @@ crimes <- read_csv("Crime_2015.csv")
 ```{r}
 statecrimerate <- crimes %>%
   group_by(State) %>%
-  summarize(crimerate = sum(ViolentCrime + Murder + Rape + Robbery + AggravatedAssault + PropertyCrime + Burglary + Theft + MotorVehicleTheft, na.rm = TRUE)) # computes overall crime rate in each state, including Puerto Rico.
+  summarize(crimerate = sum(ViolentCrime + Murder + Rape + Robbery + AggravatedAssault + PropertyCrime + Burglary + Theft + MotorVehicleTheft, na.rm = TRUE)) 
+  # computes overall crime rate in each state, including Puerto Rico.
 
 scorecard.filtered <- scorecard %>%
   mutate(State = STABBR) %>% # renames STABBR column to "State"
   select(INSTNM, CITY, State, ADM_RATE, UGDS_BLACK, UGDS_HISP, UGDS_ASIAN, UGDS_AIAN, UGDS_NHPI, UGDS_2MOR, UGDS_NRA, UGDS_UNKN, UGDS_WHITE, INC_PCT_LO, INC_PCT_M1, INC_PCT_M2, INC_PCT_H1, INC_PCT_H2, RET_FT4, PAR_ED_PCT_1STGEN, DEBT_MDN, C150_4) %>% # selects the selected columns
-  filter(`CITY` == "Los Angeles" | `CITY` == "San Francisco" | `CITY` == "New York" | `CITY` == "Chicago" | `CITY` == "Seattle" | `CITY` == "Philadelphia") %>% # prints the rows that satisfy the filter
+  filter(`CITY` == "Los Angeles" | `CITY` == "San Francisco" | `CITY` == "New York" | `CITY` == "Chicago" | `CITY` == "Seattle" | `CITY` == "Philadelphia") %>% 
+  # prints the rows that satisfy the filter
   mutate(pct_poc = (UGDS_BLACK + UGDS_HISP + UGDS_ASIAN + UGDS_AIAN + UGDS_NHPI + UGDS_2MOR) / (UGDS_BLACK + UGDS_HISP + UGDS_ASIAN + UGDS_AIAN + UGDS_NHPI + UGDS_2MOR + UGDS_NRA + UGDS_UNKN + UGDS_WHITE)) # computes the percent of the POC undergraduate population
 ```
 
