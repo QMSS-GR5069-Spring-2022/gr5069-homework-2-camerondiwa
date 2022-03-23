@@ -1,1 +1,1 @@
-4050 HW1 is basically a small project in data wrangling. the project attempts to help a student narrow down their list of colleges to apply to, based on their criteria
+4050 HW1 is basically a small project in data wrangling. The project attempts to help a hypothetical student narrow down their list of colleges to apply to, based on their unique criteria on the types of colleges they would like to attend.
